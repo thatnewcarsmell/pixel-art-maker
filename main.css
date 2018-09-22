@@ -29,7 +29,7 @@ div div{
     align-items: center;
 } */
 
-div.daddy{
+div.canvas{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
