@@ -1,0 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    margin-right: 0px;
+}
+
+/* div.row{
+    display: flex;
+    flex-direction: row;
+    position: relative; 
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+} */
+
+div div{
+    /* position: relative; */
+    width: 18px;
+    height: 18px;
+    margin: 0px;
+    background-color: white;
+    border: 1px solid black; 
+    border-style: solid;
+}
+
+/* html{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+div.daddy{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1000px;
+    height: 800px;
+    border: 1px solid black;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
