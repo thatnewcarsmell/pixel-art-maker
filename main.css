@@ -48,3 +48,11 @@ body{
     height: 100%;
     margin: 0px;
 }
+
+.clicked-sucka{
+    background-color: red;
+    /* width: 18px;
+    height: 18px;
+    margin: 0px;
+    border: 1px solid black;  */
+}
