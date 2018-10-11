@@ -3,9 +3,15 @@ document.addEventListener('DOMContentLoaded',function(){
     var toggler = false;
     var canvas = document.querySelector('#canvas');
     var palette = document.querySelector('#palette');
+    var saveButton = document.querySelector('#save');
+    var loadButton = document.querySelector('#load');
+    var clearButton = document.querySelector('#clear');
 
     palette.addEventListener('mousedown',paintSelect);
-    canvas.addEventListener('mouseover',paintIt)
+    canvas.addEventListener('mouseover',paintIt);
+    saveButton.addEventListener('click',saveCanvas);
+    loadButton.addEventListener('click',loadCanvas);
+    clearButton.addEventListener('click',clearCanvas);
 
     document.body.onmousedown = function(){
         toggler = true;
@@ -13,6 +19,28 @@ document.addEventListener('DOMContentLoaded',function(){
 
     document.body.onmouseup = function(){
         toggler = false;
+    }
+
+    function clearCanvas(){
+        location.reload();
+    }
+
+    function saveCanvas(){
+        let canvasArray = Array.from(canvas.children);
+        for(let i = 0; i < canvasArray.length; i++){
+            localStorage.setItem(i, canvasArray[i].classList.item(0));
+        }
+        return;
+    }
+
+    function loadCanvas(){
+        let canvasArray = Array.from(canvas.children);
+        for(let i = 0; i < canvasArray.length; i++){
+            if(color !== null){
+            canvas.children[i].classList.add(localStorage.getItem(i));
+            }
+        }
+        return;
     }
 
     function paintIt(){

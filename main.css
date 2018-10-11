@@ -5,12 +5,13 @@
 }
 
 @keyframes selected {
-    from {opacity: 1.0;}
-    to {opacity: 0.1;}
+    0% {opacity: 1.0;}
+    50% {opacity: 0.6;}
+    100% {opacity: 1.0;}
 }
 
 .selected{
-    animation: selected 0.1s linear infinite;
+    animation: selected 1.6s linear infinite;
 }
 
 div div{
@@ -35,18 +36,26 @@ div#canvas{
 footer#palette{
     display: flex;
     width: 1000px;
-    height: 120px;
+    height: 110px;
     justify-content: center;
     align-items: flex-end;
 }
 
 footer div{
     display: flex;
-    width: 111.11px;
+    width: 100px;
     height: 100px;
     justify-content: center;
     align-items: center;
 } 
+
+div#button-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    width: 1000px;
+    height: 20px;
+}
 
 body{
     display: flex;
@@ -92,4 +101,14 @@ div.brown{
 
 div.black{
     background-color: black;
+}
+
+div.eraser{
+    display: flex;
+    background-color: white;
+    border: 1px solid black; 
+    height: 98px;
+    width: 98px;
+    justify-content: center;
+    align-items: center;
 }
