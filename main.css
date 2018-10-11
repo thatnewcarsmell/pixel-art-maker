@@ -4,17 +4,16 @@
     margin-right: 0px;
 }
 
-/* div.row{
-    display: flex;
-    flex-direction: row;
-    position: relative; 
-    width: 400px;
-    height: 200px;
-    border: 1px solid black;
-} */
+@keyframes selected {
+    from {opacity: 1.0;}
+    to {opacity: 0.1;}
+}
+
+.selected{
+    animation: selected 0.1s linear infinite;
+}
 
 div div{
-    /* position: relative; */
     width: 18px;
     height: 18px;
     margin: 0px;
@@ -23,15 +22,7 @@ div div{
     border-style: solid;
 }
 
-
-
-/* html{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-div.canvas{
+div#canvas{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -41,7 +32,7 @@ div.canvas{
     border: 1px solid black;
 }
 
-footer.palette{
+footer#palette{
     display: flex;
     width: 1000px;
     height: 120px;
@@ -49,23 +40,13 @@ footer.palette{
     align-items: flex-end;
 }
 
-footer div.blue{
+footer div{
     display: flex;
-    width: 500px;
+    width: 111.11px;
     height: 100px;
-    border: 2px solid blue;
     justify-content: center;
     align-items: center;
-}
-
-footer div.red{
-    display: flex;
-    width: 500px;
-    height: 100px;
-    border: 2px solid red;
-    justify-content: center;
-    align-items: center;
-}
+} 
 
 body{
     display: flex;
@@ -77,18 +58,38 @@ body{
     margin: 0px;
 }
 
-.red{
-    background-color: red;
-}
-
-.blue{
-    background-color: blue;
-}
-
 div.red{
     background-color: red;
 }
 
+div.orange{
+    background-color: orange;
+}
+
+div.yellow{
+    background-color: yellow;
+}
+
+div.green{
+    background-color: green;
+}
+
 div.blue{
     background-color: blue;
+}
+
+div.indigo{
+    background-color: indigo;
+}
+
+div.violet{
+    background-color: violet;
+}
+
+div.brown{
+    background-color: brown;
+}
+
+div.black{
+    background-color: black;
 }
