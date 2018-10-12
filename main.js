@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded',function(){
     var saveButton = document.querySelector('#save');
     var loadButton = document.querySelector('#load');
     var clearButton = document.querySelector('#clear');
+    var erase = document.querySelector('.eraser');
 
     palette.addEventListener('mousedown',paintSelect);
     canvas.addEventListener('mouseover',paintIt);
