@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded',function(){
     var saveButton = document.querySelector('#save');
     var loadButton = document.querySelector('#load');
     var clearButton = document.querySelector('#clear');
-    var erase = document.querySelector('.eraser');
+    var erase = document.querySelector('#eraser');
 
     palette.addEventListener('mousedown',paintSelect);
     canvas.addEventListener('mouseover',paintIt);
@@ -37,9 +37,7 @@ document.addEventListener('DOMContentLoaded',function(){
     function loadCanvas(){
         let canvasArray = Array.from(canvas.children);
         for(let i = 0; i < canvasArray.length; i++){
-            if(color !== null){
             canvas.children[i].classList.add(localStorage.getItem(i));
-            }
         }
         return;
     }
@@ -69,7 +67,12 @@ document.addEventListener('DOMContentLoaded',function(){
         let checkIt = Array.from(palette.children);
         let target = event.target.classList;
         console.log(checkIt)
-        if(target.item(1) !== 'selected'){
+        if(target.item(0) === 'selected'){
+            target.remove('selected')
+            color = '';
+            return;
+        }
+        else if(target.item(1) !== 'selected'){
             for(let i = 0; i < checkIt.length; i++){
                 checkIt[i].classList.remove('selected');
             }
