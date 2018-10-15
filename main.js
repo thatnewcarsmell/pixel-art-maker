@@ -59,14 +59,12 @@ document.addEventListener('DOMContentLoaded',function(){
     function paintSelect($selectedColor){
         color = event.target.classList.item(0);
         selectedColor();
-        console.log(color)
         return;
     }
 
     function selectedColor(){
         let checkIt = Array.from(palette.children);
         let target = event.target.classList;
-        console.log(checkIt)
         if(target.item(0) === 'selected'){
             target.remove('selected')
             color = '';
@@ -85,6 +83,4 @@ document.addEventListener('DOMContentLoaded',function(){
             return;
         }
     }
-
-    console.log('ready!')
 });
